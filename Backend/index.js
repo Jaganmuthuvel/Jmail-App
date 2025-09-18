@@ -19,8 +19,8 @@ const credentials = mongoose.model("credentials", {}, "jmail")
 
 app.post("/sendmail", async function (req, res) {
     const { msg, file1 } = req.body;
-    console.log(msg)
-    console.log(file1)
+    // console.log(msg)
+    // console.log(file1)
     credentials.findOne().then(function (data) {
         console.log("data fetched:", data._id)
         console.log("data.user fetched:", data.toJSON().user)
@@ -45,7 +45,7 @@ app.post("/sendmail", async function (req, res) {
                         subject: "Message from jagan",
                         text: msg
                     })
-                    console.log("msg send to:" + file1[i])
+                    // console.log("msg send to:" + file1[i])
                 }
                 resolve("Success")
 
