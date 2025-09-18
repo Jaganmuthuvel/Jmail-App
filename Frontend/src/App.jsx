@@ -34,7 +34,7 @@ export default function BulkMailUI() {
   }
   const handleonclick = () => {
     setStatus(true)
-    axios.post(" https://jmail-app-1.onrender.com", { msg: msg, file1: file1 })
+    axios.post("https://jmail-app-1.onrender.com/sendmail", { msg: msg, file1: file1 })
     .then(function(data){
       if(data.data===true){
         alert("Email Send Successfully")
