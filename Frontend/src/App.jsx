@@ -12,9 +12,9 @@ export default function BulkMailUI() {
   const handleonchange = (event) => {
     setMsg(event.target.value)
   }
-  useEffect(() => {
-    console.log("file1 updated:", file1);
-  }, [file1]);
+  // useEffect(() => {
+  //   console.log("file1 updated:", file1);
+  // }, [file1]);
   const handlefile = (event) => {
     const file = event.target.files[0]
     const reader = new FileReader()
