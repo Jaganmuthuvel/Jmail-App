@@ -5,6 +5,7 @@ app.use(express.json())
 app.use(cors());
 const nodemailer = require("nodemailer");
 const mongoose = require("mongoose")
+const PORT = process.env.PORT || 5000;
 
 // Create a test account or replace with real credentials.
 mongoose.set("debug", true);
@@ -65,6 +66,6 @@ app.post("/sendmail", async function (req, res) {
 
 
 })
-app.listen(5000, function () {
+app.listen(PORT, function () {
     console.log("server started")
 })
